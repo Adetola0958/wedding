@@ -1,0 +1,56 @@
+include includes/header.pug 
+block content 
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+    body
+        div(class="container pt-3")
+            div(class="d-flex justify-content-between")
+                h5 Guests
+                p #[a(href="/admin/guest" class="ace-btn") New Guest #[i(class="fa fa-plus ml-1")]]
+
+            .row.justify-content-center
+                .col-md-10
+                    if noGuest
+                        .card
+                            p.text-small #{noGuest}
+                    
+                    if guests
+                        div(class="table-responsive card")
+                            table(class="table table-bordered" id="dataTable")
+                                thead.thead-light
+                                    tr 
+                                        th S/N 
+                                        th Full Name
+                                        th Table Number
+                                        th Extra Guest
+                                        th Actions
+                                
+                                tbody 
+                                    each guest , index in guests
+                                        - let name = `${guest.firstName} ${guest.lastName}`
+                                        - let tableNumber = guest.tableNumber
+                                        - let extraGuest = guest.extraGuest
+                                        - let updateUrl = "/admin/all-guests/" + guest._id + "/update"
+                                        - i++ 
+                                        tr 
+                                            td #{index + 1} 
+                                            td #{name}
+                                            td #{tableNumber}
+                                            td #{extraGuest}
+                                            td(class="d-flex justify-content-between")
+                                                a(href=updateUrl class="main-link fa fa-pencil")
+                                                a(class="main-link dropdown-item fa fa-trash" href="#" data-toggle="modal" data-target="#ParentLogoutModal")
+                                            div(class="modal fade" id="ParentLogoutModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                                                div(class="modal-dialog" role="document")
+                                                    div(class="modal-content")
+                                                        div(class="modal-header")
+                                                            h5(class="modal-title" id="exampleModalLabel") Are you sure?
+                                                            button(class="close" type="button" data-dismiss="modal" aria-label="Close")
+                                                                span(aria-hidden="true") ×
+                                                        div(class="modal-body") Clicking OK means this guest is no longer invited
+                                                        div(class="modal-footer")
+                                                            - let deleteUrl = "/admin/all-guests/" + guest._id + "/delete"
+                                                            a(class="ace-btn mr-3" href=deleteUrl) Ok
+                                                            button(class="cancel-btn" type="button" data-dismiss="modal") Cancel
+
+
+    include includes/footer.pug

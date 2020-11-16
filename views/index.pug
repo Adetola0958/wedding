@@ -1,0 +1,21 @@
+include includes/header.pug 
+block content
+  link(rel="stylesheet", href="")
+  body
+    div.container.pt-5 
+      p #{title}
+
+      p
+        a(href="/admin") Admin
+      p 
+        a(href="/guest/login") Guest
+
+
+
+
+
+
+
+
+
+  include includes/footer.pug

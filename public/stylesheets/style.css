@@ -1,0 +1,106 @@
+/*=========== Normalization ===========*/
+body{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.err-msg{
+  font-size: .9rem;
+  color: rgb(163, 13, 13);
+  font-weight: 600;
+}
+.chelcin_bg{
+  background-image: url("/images/blue.png") ;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form_bg{
+  background: #ffffff;
+  height: 100vh;
+}
+.form_container{
+  text-align: center;
+}
+.form_content{
+  padding-top: 8rem;
+}
+.form_content2{
+  padding-top: 5rem;
+}
+.form-control{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.login_btn{
+  outline: none;
+  border: none;
+  background: #2a2453;
+  width: 40%;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: .9rem;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+.signup_btn{
+  outline: none;
+  border: 1px solid #2a2453;
+  background: transparent;
+  width: 40%;
+  color: #2a2453;
+  font-size: .9rem;
+  padding: 8px 0;
+  border-radius: 5px;
+}
+.signup_btn:hover{
+  text-decoration: none;
+  color: #2a2453;
+}
+.button_div{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* web fonts */
+.chelcin_logo{
+  font-size: 1.5rem;
+  letter-spacing: .3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #333333;
+}
+.welcome_text{
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(192, 188, 188);
+}
+.welcome_text:hover{
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(192, 188, 188);
+  text-decoration: none;
+}
+.input_text{
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: rgb(192, 188, 188);
+}
+.input_text:focus{
+  color: rgb(89, 89, 114);
+}
+
+@media(max-width:992px) {
+  .chelcin_bg{
+    display: none;
+  }
+}
+.fixed-b{
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+
+}

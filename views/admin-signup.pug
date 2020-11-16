@@ -1,0 +1,41 @@
+include includes/header.pug 
+block content 
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+    body
+        div(class="container pt-3")
+            h5.font-bold Be The Admin
+            p.font-italic #[strong Note :] Your email address will be your default password
+            .row.justify-content-center
+                .col-md-10.card
+                    .form-field
+                        form(method="POST")
+                            div.row 
+                                div(class="col-md-6")
+                                    label(class="label") First Name :
+                                    input(type="text" class="form-control mb-3" name="firstName" required)
+                                div(class="col-md-6")
+                                    label(class="label") Last Name :
+                                    input(type="text" class="form-control mb-3" name="lastName" required)
+                                div(class="col-md-6")
+                                    label(class="label") Email :
+                                    input(type="text" class="form-control mb-3" name="email" required)
+                                div(class="col-md-6")
+                                    label(class="label") Phone Number :
+                                    input(type="tel" class="form-control mb-3" name="number" required)
+                                div(class="col-md-4")
+                                    label(class="label") Gender :
+                                    select(class="form-control mb-3 custom-select" name="gender" required)
+                                        option(value="" selected disabled="disabled") ------------
+                                        option(value="male") Male
+                                        option(value="female") Female
+
+                            div(class="text-center")
+                                button(type="submit" class="btn main-btn") Continue
+
+
+
+
+
+
+
+    include includes/footer.pug 

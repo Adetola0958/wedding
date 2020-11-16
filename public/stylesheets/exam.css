@@ -1,0 +1,70 @@
+.navbar{
+    background: #383164;
+    color: #fff;
+}
+.navbar-brand{
+    text-transform: uppercase;
+}
+.exam-box{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.question-para{
+    word-spacing: 4px;
+}
+.radio-box{
+    border: 1px solid #82a9d3;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+.ace-btn{
+    outline: 0;
+    border: 0;
+    background: #4e73df;
+    padding: 4px 15px;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: .85rem;
+}
+.ace-btn:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+.fixed-b{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.red-btn{
+    outline: 0;
+    border: 0;
+    background: #DC143C;
+    padding: 4px 15px;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: .85rem;
+}
+.red-btn:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+.success-box{
+    font-size: .9rem;
+    padding: 20px 25px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.success-box .fa-handshake-o{
+    font-size: 2rem;
+}
+.success-box .review-link{
+    color: rgb(209, 76, 62);
+}
+.success-box .review-link:hover{
+    text-decoration: none;
+}
+.success-box .review-link p{
+    border: 1px solid rgb(209, 76, 62);
+    padding: 10px;
+}

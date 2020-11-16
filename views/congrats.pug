@@ -1,0 +1,14 @@
+include includes/header.pug 
+block content 
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+    body
+        div(class="container pt-3")
+            p
+            br 
+            | Welcome to #ADEFISAYO, #{guest.firstName} #{guest.lastName}
+            br
+            | Your table number is table #{guest.tableNumber} 
+            br 
+            | Your invitation permits #{guest.extraGuest} person
+
+    include includes/footer.pug 

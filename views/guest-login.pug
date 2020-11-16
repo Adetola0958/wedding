@@ -1,0 +1,33 @@
+include includes/header.pug 
+block content 
+    link(rel="stylesheet", href="/stylesheets/dashboard.css")
+    body
+        div(class="container pt-3")
+            div(class="d-flex justify-content-between")
+                h5.font-bold Enter Your Details
+                
+
+            .row.justify-content-center
+                .col-md-6
+                    .form-field
+                        form(method="POST")
+                            p #{noEntry}
+                            div.row 
+                                div(class="col-md-6")
+                                    label(class="label") First Name :
+                                    input(type="text" class="form-control mb-3" name="firstName" required)
+                                div(class="col-md-6")
+                                    label(class="label") Last Name :
+                                    input(type="text" class="form-control mb-3" name="lastName" required)
+
+                            div(class="text-center")
+                                button(type="submit" class="btn main-btn") Enter The Hall
+    
+
+
+
+
+
+
+
+    include includes/footer.pug 
